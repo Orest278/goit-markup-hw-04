@@ -231,6 +231,7 @@ button{
     justify-content: center;
     padding-top: 24px;
     padding-bottom: 24px;
+    border-radius: 4px;
 }
 
 .future-title{
@@ -435,7 +436,7 @@ text-align: center;
 
 .portfolio-list:hover,
 .portfolio-list:focus{
-    box-shadow: 0px 1px 6px 0ox #2E2F4214;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-border{
