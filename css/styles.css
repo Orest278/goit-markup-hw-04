@@ -13,6 +13,7 @@ accent  IRIS
     --buttin-color: #404BBF;
     --background-index: #2E2F42B2;
     --logo-icons-color: #8E8F99;
+    --background-icon-footer: #31D0AA;
 } 
 
 
@@ -94,6 +95,9 @@ button{
     align-items: center;
 }
 
+.header-portfolio{
+    border-bottom: 1px solid var(--footer-text-color);
+}
 .site-nav .item {
     margin-right: 40px;
 }
@@ -115,6 +119,22 @@ button{
     letter-spacing: 0.02em;
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.current{
+    position: relative;
+    color: var(--accent-color);
+}
+
+.current::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
 .nav-link:hover, 
 .nav-link:focus{
@@ -155,6 +175,8 @@ button{
     background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .hiro-title{
@@ -232,6 +254,7 @@ button{
     padding-top: 24px;
     padding-bottom: 24px;
     border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .future-title{
@@ -343,19 +366,23 @@ text-align: center;
     justify-content: center;
 }
 
-.customers-content{
+.customers-nav{
+    display: block;
     border: 1px solid var(--logo-icons-color);
-    border-radius: 4px;
-    padding: 16px 32px;
-    fill: var(--logo-icons-color);
+        border-radius: 4px;
+        padding: 16px 32px;
+        fill: var(--logo-icons-color);
+
 }
 
-.customers-content:hover,
-.customers-content:focus{
+
+.customers-nav:hover,
+.customers-nav:focus{
     border: 1px solid var(--buttin-color);
 }
-.customers-content:hover .customers-icon,
-.customers-content:focus .customers-icon{
+
+.customers-nav:hover .customers-icon,
+.customers-nav:focus .customers-icon{
     fill: var(--buttin-color);
 }
 
@@ -434,11 +461,6 @@ text-align: center;
     gap: 48px 24px;
 }
 
-.portfolio-list:hover,
-.portfolio-list:focus{
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
 .portfolio-border{
     padding-left: 16px;
     padding-bottom: 32px;
@@ -450,6 +472,15 @@ text-align: center;
 
 .portfolio-card:nth-child(3n + 1){
     margin-left: 0px;
+}
+
+.porfolio-card-nav{
+    display: block;
+}
+
+.portfolio-card-nav:hover,
+.portfolio-card-nav:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .porfolio{
@@ -482,4 +513,9 @@ border-bottom: 1px solid var(--footer-text-color);}
         align-items: center;
         justify-content: center;
         fill: var(--logo-color);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus{
+    background-color: var(--background-icon-footer);
 }
